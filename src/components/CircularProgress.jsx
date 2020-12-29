@@ -38,6 +38,7 @@ const CircularProgress = ({ duration }) => {
     }
     textAnimation();
 
+    //Cancels animation on unmount
     return () => cancelAnimationFrame(frame);
   }, [duration]);
 
