@@ -1,10 +1,21 @@
-import CircularProgress from "./components/CircularProgress";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import ReferalEdit from "./pages/ReferalEdit";
 
 function App() {
   return (
-    <div className="text-center">
-      <CircularProgress duration={2000} />
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/referal/edit">
+          <ReferalEdit />
+        </Route>
+        <Redirect to="/referal/edit" />
+      </Switch>
+    </Router>
   );
 }
 
